@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    background: linear-gradient(287.56deg, #C2E9FB 0%, #A1C4FD 100%);
+    
+    /*Centralizar no meio da tela
+    place-items:center;
+    Body vai ocupar exatamente o height da main
+    para alterar isso
+    height 100vh
+    No entanto, centralizado perfeito engana nossos olhos, para arrumar isso
+    devemos colocar margin-top: -12rem
+    */
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+
+
+/*Lógica por trás do REM
+Seguinte
+Navegadores possuem um valor padrão para o tamanho da fonte e das coisas(Esse segundo não tenho certeza)
+Acontece que as pessoas podem alterar esse valor padrão a fim de tornar mais acessível a elas certos websites
+Se eu usar pixel fixo(px), ao invés de rem, independente do valor que a pessoa colocar no navegador, o meu programa vai sobrescrever ele. Impedindo, assim, a acessibilidade
+Além disso, para facilitar o processo de codar, trocar o root value para 62.5 do seu original e trabalhamos a partir dai. Porque?
+Porque usualmente 1 rem = 16px, e realizamos  a transformação 16px*0.625=10px na root para facilitar nossas operações quando for necessário trocar valores px em valores rem
+Facilita definir 1 rem assim e permite ainda a acessibilidade que buscamos em nosso programa./
+*/
+body, button, input{
+    font-family: "DM Sans", sans-serif;
+}
+
+button{
+    background-color: #7879F1;
+    color: white;/*cor do texto*/
+    font-weight: bold;
+    border-radius: 0 .4rem .4rem 0;
+    cursor: pointer;
+
+    transition: background .3s;
+}
+button:hover{
+    background-color: #4e4ea8;
+}
+
+
+
+
+.hide{
+    display:none;
+}
+main{
+
+    width: min(42.8rem, 90%);
+   
+    padding: 4.8rem 6.4rem 6.4rem;
+    background: white;
+    box-shadow: 0px .2rem .4rem rgba(0, 0, 0, 0.1);
+    border-radius: .6rem;
+
+
+    margin-top: -12rem ;
+
+    text-align: center;/*Alinhamento dos textos*/
+}
+/* screen1 */
+h1{
+    font-family: "Montserrar", sans-serif;
+    font-size: 2.4rem;
+    margin-top: 1.6rem
+}
+
+h1, p{
+    color: #34355B;
+
+}
+
+p{
+    opacity:0.8;
+}
+
+form{
+    margin-top:4.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+input, button{
+    border:none;
+    padding: 1.6rem;
+}
+
+input{
+    background-color:#DCE2E9;
+    width: 6rem;
+    border-radius: .4rem 0 0 .4rem;
+}
+button{
+    background-color: #7879F1;
+    color: white;/*cor do texto*/
+    font-weight: bold;
+    border-radius: 0 .4rem .4rem 0;
+}
+
+
+/* screen2 */
+h2{
+    font-size: 2.4rem;
+    font-weight: normal;
+
+    margin-bottom: 3.3rem;
+}
+
+.screen2 button{
+    border-radius: .4rem;
+}
